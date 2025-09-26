@@ -25,4 +25,4 @@ jobs:
           pip install .
 
       - name: Test with PyTest
-        run: pytest --html=tests/Reports/Report.html
+        run: pytest
