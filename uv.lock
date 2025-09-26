@@ -56,17 +56,17 @@ wheels = [
 ]
 
 [[package]]
-name = "inquirer"
-version = "3.4.1"
+name = "inquirer3"
+version = "0.6.1"
 source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "blessed" },
     { name = "editor" },
     { name = "readchar" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/c1/79/165579fdcd3c2439503732ae76394bf77f5542f3dd18135b60e808e4813c/inquirer-3.4.1.tar.gz", hash = "sha256:60d169fddffe297e2f8ad54ab33698249ccfc3fc377dafb1e5cf01a0efb9cbe5", size = 14069, upload-time = "2025-08-02T18:36:27.901Z" }
+sdist = { url = "https://files.pythonhosted.org/packages/a1/4c/12a087bac2a235d3f134daa6186199e82abf512a0961d0012cdd1c74f737/inquirer3-0.6.1.tar.gz", hash = "sha256:aca0e26922e0ba38c83bce65a54b3ed1c5f91c4c9fb72068c96a885e2749babc", size = 15151, upload-time = "2024-07-02T00:02:59.091Z" }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/f0/fd/7c404169a3e04a908df0644893a331f253a7f221961f2b6c0cf44430ae5a/inquirer-3.4.1-py3-none-any.whl", hash = "sha256:717bf146d547b595d2495e7285fd55545cff85e5ce01decc7487d2ec6a605412", size = 18152, upload-time = "2025-08-02T18:36:26.753Z" },
+    { url = "https://files.pythonhosted.org/packages/84/62/545e48a919c685cf4c2ce423c1adb88c8cfa747237ca4e107e0870c758da/inquirer3-0.6.1-py3-none-any.whl", hash = "sha256:27b4ef0beb518ac4cc7df765304663b728ba0bd32f3346bede458644b56f0146", size = 18904, upload-time = "2024-07-02T00:02:58.01Z" },
 ]
 
 [[package]]
@@ -150,13 +150,13 @@ name = "umm"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "inquirer" },
+    { name = "inquirer3" },
     { name = "pytest" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "inquirer", specifier = ">=3.4.1" },
+    { name = "inquirer3", specifier = ">=0.6.1" },
     { name = "pytest", specifier = ">=8.4.2" },
 ]
 
