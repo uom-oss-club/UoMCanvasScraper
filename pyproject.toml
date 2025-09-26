@@ -1,9 +1,9 @@
 [project]
-name = "umm"
+name = "UoM Canvas Scraper"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "inquirer3>=0.6.1",
     "pytest>=8.4.2",
