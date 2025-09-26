@@ -1,12 +1,20 @@
 import os
 import json
 import shutil
-import inquirer
+
+from utils.download_utils import get_downloads
+
+USER_DIR = os.path.expanduser("~")
+DOWNLOAD_DIR = os.path.join(USER_DIR, "Downloads")
 
 
-def get_structure():
+def get_structure() -> dict:
+    """Finds the desired structure from the config file, if the config file cannot be found asks the user to set a desired path to save into
+
+    :return: dictionary of config file paths
+    """
     if not os.path.exists(".dir"):
-        json_input = {"directory": ""}
+        json_input = {}
         while True:
             json_input["directory"] = input(
                 "enter the desired directory to copy files into: "
@@ -23,24 +31,10 @@ def get_structure():
             return json.loads(file.read())
 
 
-def get_downloads():
-    questions = [
-        inquirer.Checkbox(
-            "interests",
-            message="What are you interested in?",
-            choices=[
-                file
-                for file in os.listdir(f"{os.path.expanduser('~')}/Downloads")
-                if file.endswith(".pdf")
-            ],
-        )
-    ]
-    answers = inquirer.prompt(questions)
-
-
 def main():
     config = get_structure()
-    in_dir = get_downloads()
+    for file in get_downloads():
+        shutil.copy(f"{DOWNLOAD_DIR}/{file}", config["directory"])
 
 
 if __name__ == "__main__":
